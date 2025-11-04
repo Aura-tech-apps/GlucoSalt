@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memoria Activa - Protege Tu Memoria</title>
+    <link rel="icon" type="image/webp" href="../GlucoSalt-Logo.webp">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '829555786509993');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=829555786509993&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YB29MPTPML"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YB29MPTPML');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.5;
+            color: #2d3748;
+            background: #f0fff4;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        html {
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            background: transparent;
+            overflow: hidden;
+        }
+
+        .container::before,
+        .container::after {
+            display: none;
+        }
+
+        .header {
+            text-align: center;
+            padding: 0;
+            background: #dc2626;
+            color: white;
+            position: relative;
+            margin: 0;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0  lax 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .header::after {
+            display: none;
+        }
+
+        .header h1 {
+            font-size: 1.3rem;
+            margin: 0;
+            padding: 16px 12px;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+            line-height: 1.3;
+            color: white;
+            word-break: break-word;
+        }
+
+        .header .highlight {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.7em;
+            font-weight: 600;
+            margin-left: 6px;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+        }
+
+        .warning {
+            background: #fef2f2;
+            border: 2px solid #ef4444;
+            border-radius: 8px;
+            padding: 12px 10px;
+            margin: 10px;
+            text-align: left;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #dc2626;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .warning::before {
+            content: '!';
+            width: 18px;
+            height: 18px;
+            background: #fbbf24;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1f2937;
+            font-size: 0.8rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .success-message {
+            background: #f0fdf4;
+            border: 2px solid #10b981;
+            border-radius: 8px;
+            padding: 12px 10px;
+            margin: 10px;
+            text-align: left;
+            color: #1f2937;
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .success-message::before {
+            content: '✓';
+            width: 18px;
+            height: 18px;
+            background: #10b981;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .content-section {
+            margin: 0;
+            padding: 20px 10px;
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .content-section:nth-child(even) {
+            background: rgba(248, 250, 252, 0.8);
+        }
+
+        .questions {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px 12px;
+            margin: 12px 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            position: relative;
+            z-index: 1;
+        }
+
+        .questions h3 {
+            color: #2d3748;
+            margin-bottom: 18px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-align: center;
+            position: relative;
+        }
+
+        .questions h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #f56565;
+            border-radius: 2px;
+        }
+
+        .questions-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .question-item {
+            background: rgba(254, 242, 242, 0.8);
+            border-radius: 10px;
+            padding: 14px;
+            border-left: 4px solid #f56565;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .question-item:hover {
+            background: rgba(255, 255, 255, 0.95);
+            border-left-color: #e53e3e;
+        }
+
+        .question-item::before {
+            display: none;
+        }
+
+        .question-icon {
+            width: 36px;
+            height: 36px;
+            background: #f56565;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 8px rgba(245, 101, 101, 0.3);
+        }
+
+        .question-text {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2d3748;
+            line-height: 1.4;
+        }
+
+        .alert-box {
+            background: #f56565;
+            color: white;
+            padding: 16px 12px;
+            border-radius: 12px;
+            margin: 12px 10px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(245, 101, 101, 0.4);
+            position: relative;
+        }
+
+        .alert-box::before {
+            display: none;
+        }
+
+        .alert-box h2 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+            line-height: 1.3;
+            word-break: break-word;
+        }
+
+        .alert-box .highlight-text {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin: 8px 4px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .effects-list {
+            background: #fff0f0;
+            border-left: 4px solid #e74c3c;
+            padding: 16px;
+            margin: 0;
+        }
+
+        .effects-list h4 {
+            color: #c0392b;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .effects-list ul {
+            list-style: none;
+        }
+
+        .effects-list li {
+            padding: 6px 0;
+            padding-left: 25px;
+            position: relative;
+            font-size: 0.9rem;
+        }
+
+        .effects-list li::before {
+            content: "⚠️";
+            position: absolute;
+            left: 0;
+            top: 6px;
+        }
+
+        .story-section {
+            background: #f0f8ff;
+            border-left: 4px solid #3498db;
+            padding: 20px 15px;
+            margin: 0;
+        }
+
+        .story-section h3 {
+            color: #2980b9;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .story-section p {
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .solution-section {
+            background: rgba(255, 255, 255, 0.95);
+            color: #2d3748;
+            padding: 30px 20px;
+            border-radius: 16px;
+            margin: 20px 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .solution-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #10b981;
+        }
+
+        .solution-section::after {
+            display: none;
+        }
+
+        .solution-section h2 {
+            font-size: 1.6rem;
+            margin-bottom: 16px;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: #10b981;
+        }
+
+        .solution-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #10b981;
+            border-radius: 2px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+            position: relative;
+            z-index: 1;
+            padding: 12px;
+            background: rgba(248, 250, 252, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            border: 2px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .benefits {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 24px 16px;
+            margin: 20px 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            position: relative;
+            z-index: 1;
+        }
+
+        .benefits h3 {
+            color: #2d3748;
+            margin-bottom: 18px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-align: center;
+            position: relative;
+        }
+
+        .benefits h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #10b981;
+            border-radius: 2px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .benefit-item {
+            background: rgba(248, 250, 252, 0.8);
+            border-radius: 12px;
+            padding: 16px;
+            border-left: 4px solid #10b981;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .benefit-item:hover {
+            background: rgba(255, 255, 255, 0.95);
+            border-left-color: #059669;
+        }
+
+        .benefit-item::before {
+            display: none;
+        }
+
+        .benefit-icon {
+            width: 40px;
+            height: 40px;
+            background: #10b981;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+        }
+
+        .benefit-text {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2d3748;
+            line-height: 1.5;
+        }
+
+        .results {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 24px 16px;
+            margin: 20px 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            position: relative;
+            z-index:1;
+        }
+
+        .results h3 {
+            color: #2d3748;
+            margin-bottom: 18px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-align: center;
+            position: relative;
+        }
+
+        .results h3::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #10b981;
+            border-radius: 2px;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .result-item {
+            background: #f0fdf4;
+            border-radius: 12px;
+            padding: 14px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .result-item:hover {
+            background: #ffffff;
+        }
+
+        .result-icon {
+            width: 36px;
+            height: 36px;
+            background: #10b981;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
+        }
+
+        .result-text {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1f2937;
+            line-height: 1.4;
+            text-align: center;
+        }
+
+        .pricing {
+            background: #10b981;
+            color: white;
+            padding: 32px 20px;
+            border-radius: 16px;
+            margin: 20px 10px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+            position: relative;
+        }
+
+        .pricing::before {
+            display: none;
+        }
+
+        .pricing h2 {
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin: 12px 0;
+            position: relative;
+            z-index: 1;
+            color: #fbbf24;
+        }
+
+        .guarantee {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 14px 0;
+            font-weight: 600;
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 1;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        #hotmart-sales-funnel {
+            margin: 20px 0 0 0;
+            padding: 0;
+            min-height: 120px;
+        }
+
+        .btn-primary {
+            background: #fbbf24;
+            color: #1a202c;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 800;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(251, 191, 36, 0.4);
+            transition: background 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            width: 100%;
+            display: block;
+            min-height: 48px;
+        }
+
+        .btn-primary::before {
+            display: none;
+        }
+
+        .btn-primary:hover {
+            background: #f59e0b;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #95a5a6;
+            padding: 14px 20px;
+            border: 2px solid #bdc3c7;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: background 0.2s;
+            font-weight: 500;
+        }
+
+        .btn-secondary:hover {
+            background: #ecf0f1;
+            border-color: #95a5a6;
+            color: #7f8c8d;
+        }
+
+        .doctor-info {
+            background: #f8f9fa;
+            padding: 20px 15px;
+            margin: 0;
+            text-align: center;
+            border-top: 4px solid #3498db;
+        }
+
+        .doctor-info h3 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .doctor-info p {
+            color: #7f8c8d;
+            font-style: italic;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 20px 15px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .footer-links {
+            margin: 14px 0;
+        }
+
+        .footer-links a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 12px;
+            cursor: pointer;
+            transition: color 0.2s;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: #5dade2;
+            background: rgba(52, 152, 219, 0.1);
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+        }
+
+        .popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            max-width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .popup h2 {
+            color: #1976D2;
+            margin-bottom: 16px;
+            font-size: 1.5rem;
+        }
+
+        .popup p {
+            margin-bottom: 12px;
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            background: #FF5722;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background 0.2s;
+        }
+
+        .popup-close:hover {
+            background: #E64A19;
+        }
+
+        /* Tablet */
+        @media (min-width: 768px) {
+            .header h1 {
+                font-size: 1.5rem;
+                padding: 18px 16px;
+            }
+
+            .content-section {
+                padding: 24px 16px;
+            }
+
+            .questions {
+                margin: 16px 12px;
+                padding: 24px 18px;
+            }
+
+            .questions h3 {
+                font-size: 1.4rem;
+                margin-bottom: 20px;
+            }
+
+            .questions-grid {
+                gap: 14px;
+            }
+
+            .question-item {
+                padding: 16px;
+            }
+
+            .alert-box {
+                padding: 18px 14px;
+                margin: 16px 12px;
+            }
+
+            .alert-box h2 {
+                font-size: 1.3rem;
+            }
+
+            .solution-section {
+                padding: 36px 24px;
+                margin: 24px 12px;
+            }
+
+            .solution-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .benefits {
+                padding: 28px 20px;
+                margin: 24px 12px;
+            }
+
+            .benefits h3 {
+                font-size: 1.6rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .results {
+                padding: 28px 20px;
+                margin: 24px 12px;
+            }
+
+            .results-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+            }
+
+            .pricing {
+                padding: 36px 24px;
+                margin: 24px 12px;
+            }
+
+            .pricing h2 {
+                font-size: 1.8rem;
+            }
+
+            .price {
+                font-size: 3rem;
+            }
+
+            .btn-primary {
+                padding: 16px 24px;
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Desktop */
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 900px;
+                padding: 0 20px;
+            }
+
+            .header h1 {
+                font-size: 1.6rem;
+                padding: 20px;
+            }
+
+            .content-section {
+                padding: 28px 20px;
+            }
+
+            .questions {
+                margin: 20px;
+                padding: 32px 24px;
+            }
+
+            .questions h3 {
+                font-size: 1.6rem;
+            }
+
+            .questions-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .alert-box {
+                padding: 24px 18px;
+                margin: 20px;
+            }
+
+            .solution-section {
+                padding: 40px 32px;
+                margin: 28px 20px;
+            }
+
+            .solution-section h2 {
+                font-size: 2rem;
+            }
+
+            .benefits {
+                padding: 32px 24px;
+                margin: 28px 20px;
+            }
+
+            .benefits h3 {
+                font-size: 1.8rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .results {
+                padding: 32px 24px;
+                margin: 28px 20px;
+            }
+
+            .pricing {
+                padding: 40px 32px;
+                margin: 28px 20px;
+            }
+
+            .price {
+                font-size: 3.5rem;
+            }
+
+            .btn-primary {
+                padding: 18px 32px;
+                font-size: 1.2rem;
+                width: auto;
+                display: inline-block;
+            }
+        }
+
+        /* Touch devices */
+        @media (hover: none) and (pointer: coarse) {
+            .btn-primary, .btn-secondary {
+                min-height: 48px;
+                touch-action: manipulation;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ATENCIÓN: ¡NO CIERRES NI ACTUALICES ESTA PÁGINA AHORA!</h1>
+        </div>
+
+        <div class="success-message">
+            Tu inscripción fue confirmada con éxito.
+        </div>
+
+        <div class="warning">
+            Pero antes de finalizar, necesito advertirte sobre algo que puede estar ocurriendo contigo ahora mismo.
+        </div>
+
+        <div class="content-section">
+            <div class="questions">
+                <h3>¿Has estado olvidando las cosas con más frecuencia?</h3>
+                <div class="questions-grid">
+                    <div class="question-item">
+                        <div class="question-icon">🚪</div>
+                        <div class="question-text">¿Entras a una habitación y olvidas qué fuiste a buscar?</div>
+                    </div>
+                    <div class="question-item">
+                        <div class="question-icon">📖</div>
+                        <div class="question-text">¿Necesitas leer la misma frase varias veces para entenderla?</div>
+                    </div>
+                    <div class="question-item">
+                        <div class="question-icon">👥</div>
+                        <div class="question-text">¿Olvidas nombres de personas que conociste recientemente?</div>
+                    </div>
+                    <div class="question-item">
+                        <div class="question-icon">💬</div>
+                        <div class="question-text">¿Pierdes el hilo de la conversación a mitad de una frase?</div>
+                    </div>
+                    <div class="question-item">
+                        <div class="question-icon">☁️</div>
+                        <div class="question-text">¿Sientes que tu mente está "nublada" o confusa?</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert-box">
+            <h2>Si respondiste SÍ a por lo menos dos preguntas, presta atención:</h2>
+            <h2><span class="highlight-text">PODRÍAS ESTAR DESARROLLANDO DIABETES TIPO 3.</span></h2>
+        </div>
+
+        <div class="content-section">
+            <h3 style="font-size: 1.3rem; margin-bottom: 14px; font-weight: 700;">La diabetes afecta tu cerebro en silencio</h3>
+            <p style="margin-bottom: 10px; font-size: 0.95rem;">El exceso de azúcar en la sangre no ataca solo el páncreas.</p>
+            <p style="margin-bottom: 10px; font-size: 0.95rem;"><strong>Ataca directamente las neuronas de tu cerebro.</strong></p>
+            
+            <p style="margin-bottom: 14px; font-size: 0.95rem;">Estudios de la Universidad de Harvard muestran que las personas con diabetes tienen un <strong>60% más de probabilidades</strong> de desarrollar demencia y Alzheimer.</p>
+            
+            <div class="effects-list">
+                <h4>El azúcar elevado causa:</h4>
+                <ul>
+                    <li>Inflamación crónica en el cerebro</li>
+                    <li>Muerte de neuronas responsables de la memoria</li>
+                    <li>Acumulación de placas tóxicas en el hipocampo</li>
+                </ul>
+            </div>
+            
+            <p style="margin-top: 14px; margin-bottom: 10px; font-size: 0.95rem;"><strong>Incluso revirtiendo la diabetes, los daños en el cerebro pueden seguir avanzando.</strong></p>
+        </div>
+
+        <div class="story-section">
+            <h3>Lo que pasó con mi esposo John</h3>
+            <p>Después de que John empezó a revertir la diabetes, todo parecía perfecto.</p>
+            <p>Pero luego comenzó a olvidar dónde dejaba las llaves.</p>
+            <p>Preguntaba lo mismo dos veces en el mismo día.</p>
+            <p>Hasta que un día me llamó perdido en el camino a casa — una ruta que hacía desde hacía 15 años.</p>
+            
+            <div class="alert-box" style="margin: 16px 0;">
+                <h2 style="font-size: 1rem;"><span class="highlight-text">El diagnóstico fue: "Deterioro cognitivo leve asociado a diabetes de larga duración."</span></h2>
+            </div>
+            
+            <p>Años de glucosa elevada habían causado microlesiones en su cerebro.</p>
+            <p style="font-weight: 600;"><strong>Fue entonces cuando creé Memoria Activa.</strong></p>
+        </div>
+
+        <div class="solution-section">
+            <h2>La solución: Memoria Activa</h2>
+            
+            <div class="image-container">
+                <img src="https://ascendahoy.com/wp-content/uploads/2025/10/freepik_br_5e5fb365-16ff-48d9-9d3d-c77a7b5038b0.webp" alt="Memoria Activa" />
+            </div>
+            
+            <p style="text-align: center; margin-bottom: 20px; font-size: 1rem;">Un programa digital exclusivo para regenerar, proteger y fortalecer la mente de los pacientes diabéticos.</p>
+            
+            <div class="benefits">
+                <h3>Lo que recibes:</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📚</div>
+                        <div class="benefit-text">Libros de ejercicios cognitivos (sopas de letras, crucigramas, juegos de memoria)</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🎮</div>
+                        <div class="benefit-text">Biblioteca curada de juegos mentales online (Lumosity, Cognifit, Sudoku)</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🎯</div>
+                        <div class="benefit-text">Clases cortas con técnicas de concentración y enfoque mental</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📖</div>
+                        <div class="benefit-text">Mini libro: "Cómo Cuidar Tu Memoria y Prevenir los Olvidos"</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📅</div>
+                        <div class="benefit-text">Plan semanal de ejercicios mentales (7 días organizados)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="results">
+                <h3>Resultados de John en 3 semanas:</h3>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="result-icon">📄</div>
+                        <div class="result-text">Recordaba compromisos sin anotarlos</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-icon">🎯</div>
+                        <div class="result-text">Se concentraba en lecturas y conversaciones</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-icon">📖</div>
+                        <div class="result-text">Ya no se perdía</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-icon">🧠</div>
+                        <div class="result-text">Su memoria a corto plazo mejoró drásticamente</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pricing">
+            <h2>Solo 12 dólares</h2>
+            <div class="price">$12</div>
+            <p style="margin-bottom: 10px;">Una consulta con un neurólogo cuesta entre 150 y 300 dólares.</p>
+            <p style="margin-bottom: 16px;">Hoy obtienes acceso vitalicio a Memoria Activa por solo 12 dólares.</p>
+            
+            <div class="guarantee">
+                Garantía de 30 días: Si no funciona, te devolvemos el 100% del valor.
+            </div>
+
+            <!-- HOTMART - Sales Funnel Widget -->
+            <div id="hotmart-sales-funnel"></div>
+
+            <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+            <script>
+            checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+            </script>
+        </div>
+
+        <div class="doctor-info">
+            <h3>Dra. Yumi Takahashi</h3>
+            <p>Especialista en Nutrición y Salud</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-links">
+            <a href="#" onclick="openPopup('privacy')">Política de Privacidad</a>
+            <a href="#" onclick="openPopup('terms')">Términos de Uso</a>
+        </div>
+        <p style="font-size: 0.85rem;">&copy; 2025 Memoria Activa. Todos los derechos reservados.</p>
+    </div>
+
+    <!-- Privacy Policy Popup -->
+    <div id="privacy-popup" class="popup">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closePopup('privacy')">&times;</button>
+            <h2>Política de Privacidad</h2>
+            <p><strong>Última actualización:</strong> 1 de enero de 2025</p>
+            
+            <h3>1. Información que recopilamos</h3>
+            <p>Recopilamos información que nos proporciona directamente, como cuando se registra para nuestros servicios, realiza una compra o se comunica con nosotros.</p>
+            
+            <h3>2. Cómo utilizamos su información</h3>
+            <p>Utilizamos la información recopilada para:</p>
+            <ul>
+                <li>Proporcionar y mejorar nuestros servicios</li>
+                <li>Procesar transacciones</li>
+                <li>Enviar comunicaciones relacionadas con el servicio</li>
+                <li>Personalizar su experiencia</li>
+            </ul>
+            
+            <h3>3. Compartir información</h3>
+            <p>No vendemos, alquilamos ni compartimos su información personal con terceros, excepto según se describe en esta política.</p>
+            
+            <h3>4. Seguridad</h3>
+            <p>Implementamos medidas de seguridad técnicas y organizativas para proteger su información personal contra acceso no autorizado, alteración, divulgación o destrucción.</p>
+            
+            <h3>5. Sus derechos</h3>
+            <p>Tiene derecho a acceder, corregir, eliminar o restringir el procesamiento de su información personal. Para ejercer estos derechos, contáctenos.</p>
+            
+            <h3>6. Contacto</h3>
+            <p>Si tiene preguntas sobre esta política de privacidad, puede contactarnos en: info@memoriaactiva.com</p>
+        </div>
+    </div>
+
+    <!-- Terms of Use Popup -->
+    <div id="terms-popup" class="popup">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closePopup('terms')">&times;</button>
+            <h2>Términos de Uso</h2>
+            <p><strong>Última actualización:</strong> 1 de enero de 2025</p>
+            
+            <h3>1. Aceptación de los términos</h3>
+            <p>Al acceder y utilizar este sitio web y nuestros servicios, acepta cumplir con estos términos de uso.</p>
+            
+            <h3>2. Descripción del servicio</h3>
+            <p>Memoria Activa es un programa digital diseñado para ayudar a mejorar la función cognitiva y la memoria a través de ejercicios y técnicas especializadas.</p>
+            
+            <h3>3. Uso permitido</h3>
+            <p>Usted puede utilizar nuestros servicios únicamente para fines legales y de acuerdo con estos términos.</p>
+            
+            <h3>4. Restricciones</h3>
+            <p>No puede:</p>
+            <ul>
+                <li>Utilizar el servicio para actividades ilegales</li>
+                <li>Intentar acceder a sistemas no autorizados</li>
+                <li>Interferir con el funcionamiento del servicio</li>
+                <li>Reproducir o distribuir contenido sin autorización</li>
+            </ul>
+            
+            <h3>5. Garantía y limitación de responsabilidad</h3>
+            <p>Nuestros servicios se proporcionan "tal como están". No garantizamos resultados específicos y nuestra responsabilidad está limitada según la ley aplicable.</p>
+            
+            <h3>6. Política de reembolsos</h3>
+            <p>Ofrecemos una garantía de 30 días. Si no está satisfecho con el servicio, puede solicitar un reembolso completo dentro de este período.</p>
+            
+            <h3>7. Modificaciones</h3>
+            <p>Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios entrarán en vigor inmediatamente después de su publicación.</p>
+            
+            <h3>8. Contacto</h3>
+            <p>Para preguntas sobre estos términos, contáctenos en: legal@memoriaactiva.com</p>
+        </div>
+    </div>
+
+    <script>
+        function openPopup(type) {
+            const popup = document.getElementById(type + '-popup');
+            popup.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePopup(type) {
+            const popup = document.getElementById(type + '-popup');
+            popup.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        window.addEventListener('click', (e) => {
+            if (e.target.classList.contains('popup')) {
+                e.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>

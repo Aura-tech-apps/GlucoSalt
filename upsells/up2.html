@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlucoSalt Rewards+ - Gana Recompensas Reales</title>
+    <link rel="icon" type="image/webp" href="../GlucoSalt-Logo.webp">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '829555786509993');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=829555786509993&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YB29MPTPML"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YB29MPTPML');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #ffffff 0%, #ecf0f1 30%, #d5dbdb 70%, #ecf0f1 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .logo-container img {
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .gift-banner {
+            background: linear-gradient(135deg, #27ae60, #229954);
+            color: white;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 20px 0;
+            animation: gift-pulse 2s ease-in-out infinite;
+            box-shadow: 0 8px 20px rgba(39, 174, 96, 0.4);
+            border: 3px solid #2ecc71;
+            font-weight: 700;
+            font-size: 1rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        @keyframes gift-pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
+            }
+
+            50% {
+                transform: scale(1.02);
+                box-shadow: 0 12px 25px rgba(245, 158, 11, 0.6);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
+            }
+        }
+
+        .main-content {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            margin-bottom: 20px;
+            border: 2px solid #fbbf24;
+            width: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .content-section {
+            margin-bottom: 30px;
+        }
+
+        .content-section h1 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+            text-align: center;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-section h2 {
+            color: #27ae60;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .content-section h3 {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .content-section p {
+            color: #1f2937;
+            margin-bottom: 12px;
+            font-size: 1rem;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .content-section ul {
+            margin: 15px 0;
+            padding-left: 20px;
+            text-align: left;
+            list-style: none;
+        }
+
+        .content-section li {
+            color: #1f2937;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .content-section li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #059669;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .urgency-banner {
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+            animation: urgency-pulse 2s ease-in-out infinite;
+            box-shadow: 0 5px 15px rgba(220, 38, 38, 0.3);
+        }
+
+        @keyframes urgency-pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .cta-anchor {
+            background: linear-gradient(135deg, #27ae60, #229954);
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            margin: 20px 0;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: cta-pulse 2s ease-in-out infinite;
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+            text-decoration: none;
+            display: block;
+            padding: 15px 25px;
+            font-size: 1rem;
+        }
+
+        .cta-anchor:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.6);
+        }
+
+        @keyframes cta-pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .price-highlight {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px auto;
+            border: 3px solid #27ae60;
+            box-shadow: 0 10px 30px rgba(44, 62, 80, 0.3);
+            animation: price-glow 3s ease-in-out infinite alternate;
+            position: relative;
+            overflow: hidden;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Hotmart Checkout Styling */
+        #hotmart-sales-funnel {
+            margin: 30px 0;
+            min-height: 400px;
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        #hotmart-sales-funnel iframe {
+            width: 100% !important;
+            max-width: 100% !important;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .checkout-wrapper {
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        .checkout-wrapper > * {
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+
+        @keyframes price-glow {
+            0% {
+                box-shadow: 0 10px 30px rgba(44, 62, 80, 0.3);
+                transform: scale(1);
+            }
+
+            100% {
+                box-shadow: 0 15px 40px rgba(44, 62, 80, 0.5);
+                transform: scale(1.02);
+            }
+        }
+
+        .price-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: price-shine 3s ease-in-out infinite;
+        }
+
+        @keyframes price-shine {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+            left: 100%;
+        }
+        }
+
+        .price-highlight .price-old {
+            font-size: 1.5rem;
+            color: #bdc3c7;
+            text-decoration: line-through;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .price-highlight .price {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #f59e0b;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .price-highlight .period {
+            color: #ecf0f1;
+            font-size: 1rem;
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+        }
+
+        .price-badge {
+            background: linear-gradient(135deg, #f59e0b, #f39c12);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+            position: relative;
+            z-index: 2;
+        }
+
+        .guarantee-box {
+            background: linear-gradient(135deg, #27ae60, #229954);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .guarantee-box h3 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .guarantee-box p {
+            color: #d1fae5;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fff5f5, #ffe5e5);
+            border: 2px solid #fc8181;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .warning-box p {
+            font-size: 1rem;
+            color: #c53030;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+            box-shadow: 0 10px 25px rgba(44, 62, 80, 0.4);
+            border: 3px solid #27ae60;
+            animation: cta-glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes cta-glow {
+            0% {
+                box-shadow: 0 10px 25px rgba(44, 62, 80, 0.4);
+            }
+
+            100% {
+                box-shadow: 0 15px 35px rgba(44, 62, 80, 0.6);
+            }
+        }
+
+        .cta-section h2 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .cta-section p {
+            color: #ecf0f1;
+            font-size: 1rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .footer {
+            background: rgba(255, 255, 255, 0.95);
+            color: #1f2937;
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+
+        .footer-links {
+            margin: 20px 0;
+        }
+
+        .footer-links a {
+            color: #92400e;
+            text-decoration: none;
+            margin: 0 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .footer-links a:hover {
+            color: #f59e0b;
+        }
+
+        .cta-floating {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: calc(100% - 30px);
+            background: linear-gradient(135deg, #27ae60, #229954);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.5);
+            animation: float-bounce 2s ease-in-out infinite;
+            z-index: 1000;
+            cursor: pointer;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        @keyframes float-bounce {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+
+            50% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        /* Desktop e Tablet - Aumentar tamanhos e adicionar max-width */
+        @media (min-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .main-content {
+                max-width: 600px;
+                padding: 35px;
+            }
+
+            .logo-container {
+                margin: 20px 0;
+            }
+
+            .logo-container img {
+                max-width: 280px;
+                border-radius: 20px;
+            }
+
+            /* Hotmart Checkout Mobile */
+            #hotmart-sales-funnel {
+                margin: 15px 0;
+                min-height: 300px;
+                width: 100% !important;
+                max-width: 100% !important;
+                padding: 0;
+            }
+
+            #hotmart-sales-funnel iframe,
+            #hotmart-sales-funnel > * {
+                width: 100% !important;
+                max-width: 100% !important;
+                min-height: 300px;
+            }
+
+            .checkout-wrapper {
+                max-width: 100% !important;
+                padding: 0 10px;
+                overflow-x: hidden;
+            }
+
+            .checkout-wrapper > * {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .gift-banner {
+                max-width: 600px;
+                padding: 20px;
+                font-size: 1.2rem;
+            }
+
+            .footer {
+                max-width: 600px;
+                padding: 40px;
+            }
+
+            .content-section h1 {
+                font-size: 2.3rem;
+            }
+
+            .content-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .content-section h3 {
+                font-size: 1.3rem;
+            }
+
+            .content-section p {
+                text-align: left;
+            }
+
+            .content-section h2,
+            .content-section h3 {
+                text-align: left;
+            }
+
+            .price-highlight {
+                max-width: 500px;
+            }
+
+            .price-highlight .price {
+                font-size: 3rem;
+            }
+
+            .cta-anchor {
+                font-size: 1.15rem;
+                padding: 18px 35px;
+            }
+
+            .warning-box,
+            .guarantee-box {
+                max-width: 100%;
+            }
+
+            .cta-section {
+                max-width: 600px;
+                margin: 30px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Gift Banner -->
+        <div class="gift-banner">
+            🎁 Regalo especial para ti
+        </div>
+
+        <div class="main-content">
+            <!-- Hero Section -->
+            <div class="content-section">
+                <h1>Gana Recompensas Reales Mientras Controlas Tu Glucosa</h1>
+                
+                <!-- Logo -->
+                <div class="logo-container">
+                    <img src="/assets/GlucoSaltRewardsplus.png" alt="GlucoSalt Rewards+ Logo">
+                </div>
+
+                <p>El nuevo <strong>GlucoSalt Rewards+</strong> transforma tus caminatas diarias en salud y premios.</p>
+                <p>Cuanto más te mueves, más tu cuerpo se sana… y más ganas.</p>
+
+                <div class="cta-anchor" onclick="scrollToCheckout()">
+                    🎯 Sí, quiero desbloquear GlucoSalt Rewards+ ahora
+                </div>
+            </div>
+
+            <!-- Section 1 -->
+            <div class="content-section">
+                <h2>Ya diste un paso importante</h2>
+                <p>Has comenzado tu tratamiento con la Sal Asiática y el acompañamiento médico personalizado.</p>
+                <p>Ahora es momento de asegurar que tu cuerpo siga evolucionando cada día, de una forma ligera, placentera y motivadora.</p>
+                <p>Los estudios demuestran que las personas que caminan al menos 20 minutos al día reducen la inflamación el doble de rápido y mantienen un mejor control de la glucosa.</p>
+                <p>Y con <strong>GlucoSalt Rewards+</strong>, ese hábito se convierte en un juego de conquistas diarias.</p>
+                <p>Cada paso que das activa tu metabolismo, reduce la inflamación y libera dopamina, la hormona de la motivación y el placer.</p>
+                <p>Así, el tratamiento deja de ser un esfuerzo… y se convierte en una experiencia agradable de evolución constante.</p>
+            </div>
+
+            <!-- Urgency Banner -->
+            <div class="urgency-banner">
+                ⚠️ <strong>OFERTA LIMITADA:</strong> Solo quedan cupos disponibles para esta semana
+            </div>
+
+            <!-- Section 2 -->
+            <div class="content-section">
+                <h2>Cómo GlucoSalt Rewards+ Acelera Tu Progreso</h2>
+                
+                <h3>Gana mientras caminas</h3>
+                <p>Convierte tus pasos en créditos diarios dentro de la aplicación.</p>
+
+                <h3>Desinflámate de forma natural</h3>
+                <p>Cuanto más te mueves, más responde y se equilibra tu cuerpo.</p>
+
+                <h3>Cambia tus créditos por recompensas reales</h3>
+                <p>Transforma tu esfuerzo en dinero, productos naturales y premios de bienestar.</p>
+
+                <h3>Sigue tu progreso</h3>
+                <p>Observa tu desempeño y evolución metabólica en tiempo real dentro del app.</p>
+
+                <h3>Desafíos semanales y rankings</h3>
+                <p>Mantén la motivación con metas, clasificaciones y pequeñas victorias cada semana.</p>
+    </div>
+    
+            <!-- Section 3 -->
+            <div class="content-section">
+                <h2>Programa Exclusivo para Pacientes Aprobados GlucoSalt</h2>
+                <p>GlucoSalt Rewards+ fue creado exclusivamente para los pacientes que ya iniciaron su tratamiento completo con la Sal Asiática.</p>
+                <p>No está disponible públicamente: es una liberación especial incluida dentro de tu pedido.</p>
+                <p>Esta exclusividad existe porque el sistema de recompensas requiere integración con nuestro banco de premios y monitoreo de progreso diario.</p>
+                <p>Por eso, se ofrece solo aquí, con un <strong>80% de descuento</strong>, como un regalo especial para quienes están realmente comprometidos con su reversión.</p>
+        </div>
+
+            <!-- Price Highlight -->
+            <div class="price-highlight">
+                <div class="price-badge">🔥 OFERTA ESPECIAL</div>
+                <span class="price-old">$97</span>
+                <div class="price">$19</div>
+                <div class="period">Precio especial por tiempo limitado</div>
+        </div>
+
+            <div class="content-section">
+                <p>El acceso vitalicio a GlucoSalt Rewards+ normalmente cuesta $97, pero hoy puedes desbloquearlo por solo $19, ya agregado automáticamente a tu pedido.</p>
+                <p>Con un solo clic, activas tu acceso y comienzas a ganar recompensas desde hoy mismo.</p>
+
+                <div class="cta-anchor" onclick="scrollToCheckout()">
+                    ✅ Sí, quiero mi GlucoSalt Rewards+ por solo $19
+                </div>
+                
+                <div class="warning-box">
+                    <p>⚠️ Atención: Esta página se muestra una sola vez.<br>
+                        Al salir, el descuento se desactiva de forma permanente.</p>
+            </div>
+        </div>
+
+            <!-- Guarantee Box -->
+            <div class="content-section">
+                <h2>Garantía Total de 60 Días</h2>
+                <p>Prueba GlucoSalt Rewards+ durante 60 días.</p>
+                <p>Si no sientes más energía, motivación y progreso, te devolvemos el 100% de tu inversión.</p>
+                <p>Quedas completamente satisfecho… o no pagas nada.</p>
+                <p><strong>Así de simple.</strong></p>
+        </div>
+
+            <!-- Final CTA -->
+            <div class="cta-section" id="main-cta">
+                <h2>🎯 Cada Paso Ahora Vale Salud y Recompensa</h2>
+                <p>El camino para revertir la diabetes no tiene que ser agotador.</p>
+                <p>Con GlucoSalt Rewards+, conviertes cada movimiento en una conquista, y cada conquista en un progreso real.</p>
+                <p>Este es el momento de transformar tu salud en recompensa. Da el siguiente paso y desbloquea tu acceso exclusivo.</p>
+
+                <!-- HOTMART - Sales Funnel Widget -->
+                <div class="checkout-wrapper">
+                    <div id="hotmart-sales-funnel"></div>
+                </div>
+
+                <div style="margin-top: 20px; padding: 15px; background: rgba(31,41,55,0.1); border-radius: 10px;">
+                    <p><strong>✅ Garantía de 60 días</strong> - Si no funciona, te devolvemos el dinero</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 GlucoSalt. Todos los derechos reservados.</p>
+            <div class="footer-links">
+                <a href="#" onclick="openModal('terms')">Términos de Servicio</a>
+                <a href="#" onclick="openModal('privacy')">Política de Privacidad</a>
+        </div>
+    </div>
+
+        <!-- CTA Flutuante -->
+        <div class="cta-floating" onclick="scrollToCheckout()">
+            🎯 ¡QUIERO MIS RECOMPENSAS!
+        </div>
+    </div>
+
+    <!-- HOTMART Scripts -->
+    <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+    <script>
+        // Inicializar Hotmart Checkout após o DOM carregar
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof checkoutElements !== 'undefined') {
+                checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
+            }
+        });
+
+        // Scroll suave para o checkout
+        function scrollToCheckout() {
+            const ctaSection = document.getElementById('main-cta');
+            if (ctaSection) {
+                ctaSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // Manter scrollToCTA para compatibilidade
+        function scrollToCTA() {
+            scrollToCheckout();
+        }
+
+        // Funções dos modais
+        function openModal(type) {
+            alert('Modal: ' + type);
+        }
+
+        // Animação de entrada nos elementos
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.content-section');
+            elements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight;
+                
+                if (isVisible) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar animações
+            const elements = document.querySelectorAll('.content-section');
+            elements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            });
+
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll();
+        });
+    </script>
+</body>
+
+</html>
