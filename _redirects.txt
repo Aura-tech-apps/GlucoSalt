@@ -4,8 +4,8 @@
 # =========================
 
 # -------- Presell --------
-/yuo      /presell/presell.html      200
-/yuo/     /presell/presell.html      200
+/yuo      index.html      200
+/yuo/     index.html      200
 
 # -------- LEAD 1 --------
 /klm      /front/lead1/vsl-27.html   200
