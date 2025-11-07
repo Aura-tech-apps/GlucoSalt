@@ -1,89 +1,79 @@
-########################################
-# REWRITES 300 
-########################################
-
 # Presell
-/presell/presell.html      /yuo 301
-/presell/presell.html      /yuo/ 301
+/yuo   /presell/presell.html 200
+/yuo/  /presell/presell.html 200
 
 # LEAD 1
-/front/lead1/vsl-27.html   /klm 301
-/front/lead1/vsl-27.html   /klm/ 301
-/front/lead1/vsl-37.html   /nop 301
-/front/lead1/vsl-37.html   /nop/ 301
-/front/lead1/vsl-47.html   /ntg 301
-/front/lead1/vsl-47.html   /ntg/ 301
+/klm   /front/lead1/vsl-27.html 200
+/klm/  /front/lead1/vsl-27.html 200
+/nop   /front/lead1/vsl-37.html 200
+/nop/  /front/lead1/vsl-37.html 200
+/ntg   /front/lead1/vsl-47.html 200
+/ntg/  /front/lead1/vsl-47.html 200
 
 # LEAD 2
-/front/lead2/vsl-27.html   /efg 301
-/front/lead2/vsl-27.html   /efg/ 301
-/front/lead2/vsl-37.html   /hij 301
-/front/lead2/vsl-37.html   /hij/ 301
-/front/lead2/vsl-47.html   /bvc 301
-/front/lead2/vsl-47.html   /bvc/ 301
+/efg   /front/lead2/vsl-27.html 200
+/efg/  /front/lead2/vsl-27.html 200
+/hij   /front/lead2/vsl-37.html 200
+/hij/  /front/lead2/vsl-37.html 200
+/bvc   /front/lead2/vsl-47.html 200
+/bvc/  /front/lead2/vsl-47.html 200
 
 # LEAD 3
-/front/lead3/vsl-27.html   /yza 301
-/front/lead3/vsl-27.html   /yza/ 301
-/front/lead3/vsl-37.html   /bcd 301
-/front/lead3/vsl-37.html   /bcd/ 301
-/front/lead3/vsl-47.html   /fas 301
-/front/lead3/vsl-47.html   /fas/ 301
+/yza   /front/lead3/vsl-27.html 200
+/yza/  /front/lead3/vsl-27.html 200
+/bcd   /front/lead3/vsl-37.html 200
+/bcd/  /front/lead3/vsl-37.html 200
+/fas   /front/lead3/vsl-47.html 200
+/fas/  /front/lead3/vsl-47.html 200
 
 # LEAD 4
-/front/lead4/vsl-27.html   /hgx 301
-/front/lead4/vsl-27.html   /hgx/ 301
-/front/lead4/vsl-37.html   /jjg 301
-/front/lead4/vsl-37.html   /jjg/ 301
-/front/lead4/vsl-47.html   /ewq 301
-/front/lead4/vsl-47.html   /ewq/ 301
+/hgx   /front/lead4/vsl-27.html 200
+/hgx/  /front/lead4/vsl-27.html 200
+/jjg   /front/lead4/vsl-37.html 200
+/jjg/  /front/lead4/vsl-37.html 200
+/ewq   /front/lead4/vsl-47.html 200
+/ewq/  /front/lead4/vsl-47.html 200
 
 # UPSELLS
-/upsells/up1.html          /eer 301
-/upsells/up1.html          /eer/ 301
-/upsells/up2.html          /rto 301
-/upsells/up2.html          /rto/ 301
-/upsells/up3.html          /rrt 301
-/upsells/up3.html          /rrt/ 301
-/upsells/up4.html          /hfa 301
-/upsells/up4.html          /hfa/ 301
-/upsells/gracias.html      /gracias 301
-/upsells/gracias.html      /gracias/ 301
+/eer      /upsells/up1.html 200
+/eer/     /upsells/up1.html 200
+/rto      /upsells/up2.html 200
+/rto/     /upsells/up2.html 200
+/rrt      /upsells/up3.html 200
+/rrt/     /upsells/up3.html 200
+/hfa      /upsells/up4.html 200
+/hfa/     /upsells/up4.html 200
+/gracias  /upsells/gracias.html 200
+/gracias/ /upsells/gracias.html 200
 
 # BACKREDIRECT (.html)
-/backredirect/lead1/var-27.html   /bru/1/a 301
-/backredirect/lead1/var-27.html   /bru/1/a/ 301
-/backredirect/lead1/var-37.html   /bru/1/b 301
-/backredirect/lead1/var-37.html   /bru/1/b/ 301
-/backredirect/lead1/var-47.html   /bru/1/c 301
-/backredirect/lead1/var-47.html   /bru/1/c/ 301
+/bru/1/a  /backredirect/lead1/var-27.html 200
+/bru/1/a/ /backredirect/lead1/var-27.html 200
+/bru/1/b  /backredirect/lead1/var-37.html 200
+/bru/1/b/ /backredirect/lead1/var-37.html 200
+/bru/1/c  /backredirect/lead1/var-47.html 200
+/bru/1/c/ /backredirect/lead1/var-47.html 200
 
-/backredirect/lead2/var-27.html   /bru/2/a 301
-/backredirect/lead2/var-27.html   /bru/2/a/ 301
-/backredirect/lead2/var-37.html   /bru/2/b 301
-/backredirect/lead2/var-37.html   /bru/2/b/ 301
-/backredirect/lead2/var-47.html   /bru/2/c 301
-/backredirect/lead2/var-47.html   /bru/2/c/ 301
+/bru/2/a  /backredirect/lead2/var-27.html 200
+/bru/2/a/ /backredirect/lead2/var-27.html 200
+/bru/2/b  /backredirect/lead2/var-37.html 200
+/bru/2/b/ /backredirect/lead2/var-37.html 200
+/bru/2/c  /backredirect/lead2/var-47.html 200
+/bru/2/c/ /backredirect/lead2/var-47.html 200
 
-/backredirect/lead3/var-27.html   /bru/3/a 301
-/backredirect/lead3/var-27.html   /bru/3/a/ 301
-/backredirect/lead3/var-37.html   /bru/3/b 301
-/backredirect/lead3/var-37.html   /bru/3/b/ 301
-/backredirect/lead3/var-47.html   /bru/3/c 301
-/backredirect/lead3/var-47.html   /bru/3/c/ 301
+/bru/3/a  /backredirect/lead3/var-27.html 200
+/bru/3/a/ /backredirect/lead3/var-27.html 200
+/bru/3/b  /backredirect/lead3/var-37.html 200
+/bru/3/b/ /backredirect/lead3/var-37.html 200
+/bru/3/c  /backredirect/lead3/var-47.html 200
+/bru/3/c/ /backredirect/lead3/var-47.html 200
 
-/backredirect/lead4/var-27.html   /bru/4/a 301
-/backredirect/lead4/var-27.html   /bru/4/a/ 301
-/backredirect/lead4/var-37.html   /bru/4/b 301
-/backredirect/lead4/var-37.html   /bru/4/b/ 301
-/backredirect/lead4/var-47.html   /bru/4/c 301
-/backredirect/lead4/var-47.html   /bru/4/c/ 301
+/bru/4/a  /backredirect/lead4/var-27.html 200
+/bru/4/a/ /backredirect/lead4/var-27.html 200
+/bru/4/b  /backredirect/lead4/var-37.html 200
+/bru/4/b/ /backredirect/lead4/var-37.html 200
+/bru/4/c  /backredirect/lead4/var-47.html 200
+/bru/4/c/ /backredirect/lead4/var-47.html 200
 
-# Atalho
-/backredirect/lead1/var-27.html   /var 301
-/backredirect/lead1/var-27.html   /var/ 301
-
-
-########################################
-# 404 por último (sem fallback 200)
+# 404 por último
 /* /404.html 404
