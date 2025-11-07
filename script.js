@@ -1,0 +1,1 @@
+window.history.pushState({}, 'klm', '/front/lead1/vsl-27');
