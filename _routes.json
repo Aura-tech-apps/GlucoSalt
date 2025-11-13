@@ -1,11 +1,13 @@
 {
   "version": 1,
-  "description": "Configuração de rotas - Slugs personalizadas com bloqueio de acesso direto",
+  "description": "Configuração de rotas do Cloudflare Pages - Functions processam tudo exceto assets estáticos",
   "include": [
     "/*"
   ],
   "exclude": [
     "/assets/*",
-    "/upsells/*"
+    "/backredirect/assets/*",
+    "/backredirect/src/*",
+    "/front/src/*"
   ]
 }

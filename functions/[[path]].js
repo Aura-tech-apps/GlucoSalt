@@ -1,4 +1,12 @@
-// Mapa de rotas personalizadas
+/**
+ * Cloudflare Pages Function - Rewrite de URLs
+ * Baseado na documentação oficial: https://developers.cloudflare.com/pages/functions/
+ * 
+ * Esta function intercepta requisições e faz rewrite interno (como nginx rewrite)
+ * mantendo a URL original no navegador.
+ */
+
+// Mapa de rotas: slug limpa → caminho real do arquivo
 const ROUTE_MAP = {
   // PRESELL
   '/yuo': '/presell/presell.html',
@@ -45,37 +53,46 @@ const ROUTE_MAP = {
 };
 
 export async function onRequest(context) {
-  const url = new URL(context.request.url);
-  let pathname = url.pathname;
-  
-  // Remove trailing slash para normalizar
-  if (pathname.endsWith('/') && pathname.length > 1) {
-    pathname = pathname.slice(0, -1);
-  }
-  
-  // Verifica se a rota está no mapa
-  const targetPath = ROUTE_MAP[pathname];
-  
-  if (targetPath) {
-    // Cria uma nova URL apontando para o arquivo real
-    const targetUrl = new URL(targetPath, url.origin);
+  try {
+    const url = new URL(context.request.url);
+    let pathname = url.pathname;
     
-    // Faz o fetch do conteúdo real usando env.ASSETS
-    const assetResponse = await context.env.ASSETS.fetch(targetUrl.toString());
+    // Normaliza pathname removendo trailing slash
+    if (pathname !== '/' && pathname.endsWith('/')) {
+      pathname = pathname.slice(0, -1);
+    }
     
-    // Cria uma nova Response mantendo o conteúdo mas sem headers de redirect
-    const headers = new Headers(assetResponse.headers);
-    headers.delete('location');
-    headers.delete('content-location');
+    // Verifica se a rota slug está no mapa
+    const targetPath = ROUTE_MAP[pathname];
     
-    return new Response(assetResponse.body, {
-      status: 200,
-      statusText: 'OK',
-      headers: headers
+    if (targetPath) {
+      // Rewrite: modifica o pathname para apontar ao arquivo real
+      const rewrittenUrl = new URL(context.request.url);
+      rewrittenUrl.pathname = targetPath;
+      
+      // Busca o arquivo real dos assets compilados
+      const response = await context.env.ASSETS.fetch(rewrittenUrl);
+      
+      // Retorna o conteúdo com status 200
+      // O navegador mantém a URL original (slug limpa)
+      return new Response(response.body, {
+        status: 200,
+        headers: response.headers
+      });
+    }
+    
+    // Rota não encontrada no mapa, deixa o Cloudflare processar normalmente
+    return context.next();
+    
+  } catch (error) {
+    // Em caso de erro, retorna 404
+    console.error('Erro na Function:', error);
+    return new Response('Página não encontrada', {
+      status: 404,
+      headers: {
+        'Content-Type': 'text/plain; charset=utf-8'
+      }
     });
   }
-  
-  // Se não encontrou no mapa, continua normalmente
-  return context.next();
 }
 
