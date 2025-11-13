@@ -9,40 +9,40 @@ export async function onRequest(context) {
   // -----------------------------
   const map = {
     // Presell
-    "/yuo": "/presell/presell",
-    "/yuo/": "/presell/presell",
+    "/yuo": "/presell/presell.html",
+    "/yuo/": "/presell/presell.html",
 
     // Lead 1
-    "/klm": "/front/lead1/vsl-27",
-    "/klm/": "/front/lead1/vsl-27",
-    "/nop": "/front/lead1/vsl-37",
-    "/nop/": "/front/lead1/vsl-37",
-    "/ntg": "/front/lead1/vsl-47",
-    "/ntg/": "/front/lead1/vsl-47",
+    "/klm": "/front/lead1/vsl-27.html",
+    "/klm/": "/front/lead1/vsl-27.html",
+    "/nop": "/front/lead1/vsl-37.html",
+    "/nop/": "/front/lead1/vsl-37.html",
+    "/ntg": "/front/lead1/vsl-47.html",
+    "/ntg/": "/front/lead1/vsl-47.html",
 
     // Lead 2
-    "/efg": "/front/lead2/vsl-27",
-    "/efg/": "/front/lead2/vsl-27",
-    "/hij": "/front/lead2/vsl-37",
-    "/hij/": "/front/lead2/vsl-37",
-    "/bvc": "/front/lead2/vsl-47",
-    "/bvc/": "/front/lead2/vsl-47",
+    "/efg": "/front/lead2/vsl-27.html",
+    "/efg/": "/front/lead2/vsl-27.html",
+    "/hij": "/front/lead2/vsl-37.html",
+    "/hij/": "/front/lead2/vsl-37.html",
+    "/bvc": "/front/lead2/vsl-47.html",
+    "/bvc/": "/front/lead2/vsl-47.html",
 
     // Lead 3
-    "/yza": "/front/lead3/vsl-27",
-    "/yza/": "/front/lead3/vsl-27",
-    "/bcd": "/front/lead3/vsl-37",
-    "/bcd/": "/front/lead3/vsl-37",
-    "/fas": "/front/lead3/vsl-47",
-    "/fas/": "/front/lead3/vsl-47",
+    "/yza": "/front/lead3/vsl-27.html",
+    "/yza/": "/front/lead3/vsl-27.html",
+    "/bcd": "/front/lead3/vsl-37.html",
+    "/bcd/": "/front/lead3/vsl-37.html",
+    "/fas": "/front/lead3/vsl-47.html",
+    "/fas/": "/front/lead3/vsl-47.html",
 
     // Lead 4
-    "/hgx": "/front/lead4/vsl-27",
-    "/hgx/": "/front/lead4/vsl-27",
-    "/jjg": "/front/lead4/vsl-37",
-    "/jjg/": "/front/lead4/vsl-37",
-    "/ewq": "/front/lead4/vsl-47",
-    "/ewq/": "/front/lead4/vsl-47"
+    "/hgx": "/front/lead4/vsl-27.html",
+    "/hgx/": "/front/lead4/vsl-27.html",
+    "/jjg": "/front/lead4/vsl-37.html",
+    "/jjg/": "/front/lead4/vsl-37.html",
+    "/ewq": "/front/lead4/vsl-47.html",
+    "/ewq/": "/front/lead4/vsl-47.html"
   };
 
   // -----------------------------
