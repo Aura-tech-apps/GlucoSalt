@@ -37,24 +37,22 @@ export async function onRequest(context) {
   const targetPath = ROUTE_MAP[pathname];
   
   if (targetPath) {
-    try {
-      // Cria URL completa para o asset de destino
-      const assetUrl = new URL(targetPath, url.origin);
-      
-      // Faz fetch direto do asset
-      const response = await context.env.ASSETS.fetch(assetUrl);
-      
-      // Retorna a resposta com os headers corretos
-      // Isso serve o conteúdo sem mudar a URL no navegador
-      return new Response(response.body, {
-        status: response.status,
-        statusText: response.statusText,
-        headers: response.headers
-      });
-    } catch (error) {
-      console.error('Erro ao fazer rewrite:', error);
-      return context.next();
-    }
+    // Cria uma nova URL apontando para o arquivo real
+    const targetUrl = new URL(targetPath, url.origin);
+    
+    // Faz o fetch do conteúdo real usando env.ASSETS
+    const assetResponse = await context.env.ASSETS.fetch(targetUrl.toString());
+    
+    // Cria uma nova Response mantendo o conteúdo mas sem headers de redirect
+    const headers = new Headers(assetResponse.headers);
+    headers.delete('location');
+    headers.delete('content-location');
+    
+    return new Response(assetResponse.body, {
+      status: 200,
+      statusText: 'OK',
+      headers: headers
+    });
   }
   
   // Se não encontrou no mapa, continua normalmente
