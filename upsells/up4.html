@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descanso Reparador - Controla Tu Glucosa Durmiendo Bien</title>
+    <link rel="icon" type="image/webp" href="../GlucoSalt-Logo.webp">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '829555786509993');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=829555786509993&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YB29MPTPML"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YB29MPTPML');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.5;
+            color: #2d3748;
+            background: #E3F2FD;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        html {
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0;
+            background: transparent;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Background decorative elements - removido */
+        .container::before,
+        .container::after {
+            display: none;
+        }
+
+        .header {
+            text-align: center;
+            padding: 0;
+            background: #D32F2F;
+            color: white;
+            position: relative;
+            margin: 0;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .header::after {
+            display: none;
+        }
+
+        .header h1 {
+            font-size: 1.3rem;
+            margin: 0;
+            padding: 16px 12px;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+            line-height: 1.3;
+            color: white;
+            word-break: break-word;
+        }
+
+        .header .highlight {
+            display: inline-block;
+            background: #FF6F00;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.7em;
+            font-weight: 600;
+            margin-left: 6px;
+            box-shadow: 0 2px 8px rgba(255, 111, 0, 0.3);
+        }
+
+        .warning {
+            background: #fef2f2;
+            border: 2px solid #ef4444;
+            border-radius: 8px;
+            padding: 12px 10px;
+            margin: 10px;
+            text-align: left;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: #dc2626;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .warning::before {
+            content: '!';
+            position: static;
+            width: 24px;
+            height: 24px;
+            background: #fbbf24;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1f2937;
+            font-size: 1rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+
+        .success-message {
+            background: #E3F2FD;
+            border: 2px solid #1976D2;
+            border-radius: 8px;
+            padding: 12px 10px;
+            margin: 10px;
+            text-align: left;
+            color: #1f2937;
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .success-message::before {
+            content: '✓';
+            position: static;
+            width: 24px;
+            height: 24px;
+            background: #1976D2;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .content-section {
+            margin: 0;
+            padding: 20px 10px;
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .content-section:nth-child(even) {
+            background: rgba(248, 250, 252, 0.8);
+        }
+
+        .content-section:nth-child(even) {
+            background: rgba(248, 250, 252, 0.8);
+        }
+
+        .questions {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            padding: 20px 12px;
+            margin: 12px 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            position: relative;
+            z-index: 1;
+        }
+
+        .questions h3 {
+            color: #2d3748;
+            margin-bottom: 18px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-align: center;
+            position: relative;
+        }
+
+        .questions h3::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #f56565, #fc8181);
+            border-radius: 2px;
+        }
+
+        .questions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .question-item {
+            background: rgba(254, 242, 242, 0.8);
+            border-radius: 20px;
+            padding: 30px;
+            border-left: 5px solid #f56565;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .question-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            border-left-color: #e53e3e;
+        }
+
+        .question-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #f56565, #fc8181);
+        }
+
+        .question-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #f56565, #e53e3e);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 25px rgba(245, 101, 101, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .question-item:hover .question-icon {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 12px 35px rgba(245, 101, 101, 0.4);
+        }
+
+        .question-text {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #2d3748;
+            line-height: 1.6;
+        }
+
+        .alert-box {
+            background: #f56565;
+            color: white;
+            padding: 16px 12px;
+            border-radius: 12px;
+            margin: 12px 10px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(245, 101, 101, 0.4);
+            position: relative;
+        }
+
+        .alert-box::before {
+            display: none;
+        }
+
+        .alert-box h2 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+            line-height: 1.3;
+            word-break: break-word;
+        }
+
+        .alert-box .highlight-text {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin: 10px 5px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .effects-list {
+            background: linear-gradient(135deg, #fff0f0, #ffe0e0);
+            border-left: 5px solid #e74c3c;
+            border-radius: 0;
+            padding: 30px;
+            margin: 0;
+        }
+
+        .effects-list h4 {
+            color: #c0392b;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .effects-list ul {
+            list-style: none;
+        }
+
+        .effects-list li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .effects-list li::before {
+            content: "⚠️";
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+
+        .story-section {
+            background: #f0f8ff;
+            border-left: 4px solid #3498db;
+            padding: 20px 15px;
+            margin: 0;
+        }
+
+        .story-section h3 {
+            color: #2980b9;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .story-section p {
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .solution-section {
+            background: rgba(255, 255, 255, 0.95);
+            color: #2d3748;
+            padding: 80px 50px;
+            border-radius: 30px;
+            margin: 40px;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.08);
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        .solution-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #1976D2, #1565C0, #1976D2);
+        }
+
+        .solution-section::after {
+            display: none;
+        }
+
+        .solution-section h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            background: linear-gradient(135deg, #1976D2, #1565C0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .solution-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #1976D2, #1565C0);
+            border-radius: 2px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 60px 0;
+            position: relative;
+            z-index: 1;
+            padding: 30px;
+            background: rgba(248, 250, 252, 0.8);
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 25px;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
+            transition: all 0.5s ease;
+            border: 3px solid rgba(25, 118, 210, 0.2);
+        }
+
+        .image-container img:hover {
+            transform: scale(1.03) translateY(-10px);
+            box-shadow: 0 35px 100px rgba(0, 0, 0, 0.2);
+            border-color: rgba(25, 118, 210, 0.4);
+        }
+
+        .benefits {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 24px 16px;
+            margin: 20px 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            position: relative;
+            z-index: 1;
+        }
+
+        .benefits h3 {
+            color: #2d3748;
+            margin-bottom: 18px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-align: center;
+            position: relative;
+        }
+
+        .benefits h3::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #1976D2, #1565C0);
+            border-radius: 2px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .benefit-item {
+            background: rgba(248, 250, 252, 0.8);
+            border-radius: 20px;
+            padding: 30px;
+            border-left: 5px solid #1976D2;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+            border-left-color: #1565C0;
+        }
+
+        .benefit-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1976D2, #1565C0);
+        }
+
+        .benefit-icon {
+            width: 40px;
+            height: 40px;
+            background: #1976D2;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3);
+        }
+
+        .benefit-text {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2d3748;
+            line-height: 1.5;
+        }
+
+        .results {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 24px 16px;
+            margin: 20px 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            position: relative;
+            z-index: 1;
+        }
+
+        .results h3 {
+            color: #2d3748;
+            margin-bottom: 18px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-align: center;
+            position: relative;
+        }
+
+        .results h3::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #1976D2, #1565C0);
+            border-radius: 2px;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .result-item {
+            background: #f0fdf4;
+            border-radius: 20px;
+            padding: 25px;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            text-align: center;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .result-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+        }
+
+        .result-icon {
+            width: 50px;
+            height: 50px;
+            background: #1976D2;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(25, 118, 210, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .result-item:hover .result-icon {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(25, 118, 210, 0.3);
+        }
+
+        .result-text {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #1f2937;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .pricing {
+            background: linear-gradient(135deg, #5E35B1, #7E57C2);
+            color: white;
+            padding: 80px 50px;
+            border-radius: 30px;
+            margin: 40px;
+            text-align: center;
+            box-shadow: 0 25px 80px rgba(94, 53, 177, 0.4);
+            position: relative;
+        }
+
+        .pricing::before {
+            display: none;
+        }
+
+        .pricing h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+            position: relative;
+            z-index: 1;
+            line-height: 1.2;
+        }
+
+        .price {
+            font-size: 5rem;
+            font-weight: 900;
+            margin: 30px 0;
+            position: relative;
+            z-index: 1;
+            color: #FFB74D;
+            text-shadow: 0 4px 20px rgba(255, 183, 77, 0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 4px 20px rgba(255, 183, 77, 0.5); }
+            to { text-shadow: 0 6px 30px rgba(255, 183, 77, 0.8); }
+        }
+
+        .guarantee {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 12px;
+            margin: 14px 0;
+            font-weight: 600;
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 1;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        #hotmart-sales-funnel {
+            margin: 20px 0 0 0;
+            padding: 0;
+            min-height: 120px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #FF6F00, #FF9800);
+            color: #ffffff;
+            padding: 25px 60px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(255, 111, 0, 0.4);
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 30px 70px rgba(255, 111, 0, 0.6);
+            background: linear-gradient(135deg, #FF8F00, #FFA726);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #95a5a6;
+            padding: 18px 35px;
+            border: 2px solid #bdc3c7;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .btn-secondary:hover {
+            background: #ecf0f1;
+            border-color: #95a5a6;
+            color: #7f8c8d;
+        }
+
+        .doctor-info {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 0;
+            padding: 40px 30px;
+            margin: 0;
+            text-align: center;
+            border-top: 5px solid #3498db;
+        }
+
+        .doctor-info h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        .doctor-info p {
+            color: #7f8c8d;
+            font-style: italic;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 20px 15px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .footer-links {
+            margin: 14px 0;
+        }
+
+        .footer-links a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 12px;
+            cursor: pointer;
+            transition: color 0.2s;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: #5dade2;
+            background: rgba(52, 152, 219, 0.1);
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+        }
+
+        .popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .popup h2 {
+            color: #1976D2;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .popup p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: #FF5722;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background 0.3s ease;
+        }
+
+        .popup-close:hover {
+            background: #E64A19;
+        }
+
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                max-width: 100%;
+                padding: 0;
+            }
+
+            .container::before,
+            .container::after {
+                display: none;
+            }
+
+            .header {
+                margin: 0;
+                border-radius: 0;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+                line-height: 1.2;
+                word-break: break-word;
+                hyphens: auto;
+                padding: 25px 20px;
+            }
+
+            .alert-box {
+                padding: 25px 15px;
+                margin: 20px 15px;
+                border-radius: 20px;
+            }
+
+            .alert-box h2 {
+                font-size: 1.5rem;
+                line-height: 1.3;
+                word-break: break-word;
+            }
+
+            .success-message, .warning {
+                margin: 15px;
+                padding: 18px;
+                border-radius: 10px;
+                font-size: 1rem;
+                gap: 12px;
+            }
+
+            .success-message::before, .warning::before {
+                width: 20px;
+                height: 20px;
+                font-size: 0.9rem;
+            }
+
+            .content-section {
+                padding: 30px 15px;
+            }
+
+            .questions {
+                margin: 20px 15px;
+                padding: 30px 20px;
+                border-radius: 20px;
+            }
+
+            .questions h3 {
+                font-size: 1.6rem;
+                margin-bottom: 30px;
+            }
+
+            .questions-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .question-item {
+                padding: 20px;
+                border-radius: 15px;
+            }
+
+            .question-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+                margin-bottom: 15px;
+            }
+
+            .question-text {
+                font-size: 1rem;
+            }
+
+            .effects-list {
+                padding: 20px;
+                margin: 20px 0;
+            }
+
+            .effects-list h4 {
+                font-size: 1.2rem;
+            }
+
+            .story-section {
+                padding: 30px 20px;
+            }
+
+            .story-section h3 {
+                font-size: 1.4rem;
+            }
+
+            .solution-section {
+                padding: 40px 20px;
+                margin: 20px 15px;
+                border-radius: 20px;
+            }
+
+            .solution-section h2 {
+                font-size: 2rem;
+                margin-bottom: 25px;
+            }
+
+            .image-container {
+                margin: 30px 0;
+                padding: 20px;
+                border-radius: 15px;
+            }
+
+            .image-container img {
+                border-radius: 15px;
+                border-width: 2px;
+            }
+
+            .benefits {
+                margin: 30px 0;
+                padding: 30px 20px;
+                border-radius: 20px;
+            }
+
+            .benefits h3 {
+                font-size: 1.6rem;
+                margin-bottom: 30px;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .benefit-item {
+                padding: 20px;
+                border-radius: 15px;
+            }
+
+            .benefit-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+                margin-bottom: 15px;
+            }
+
+            .benefit-text {
+                font-size: 1rem;
+            }
+
+            .results {
+                margin: 30px 0;
+                padding: 30px 20px;
+                border-radius: 20px;
+            }
+
+            .results h3 {
+                font-size: 1.6rem;
+                margin-bottom: 30px;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                max-width: 100%;
+            }
+
+            .result-item {
+                padding: 20px;
+                border-radius: 15px;
+                min-height: 120px;
+            }
+
+            .result-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+                margin-bottom: 15px;
+            }
+
+            .result-text {
+                font-size: 0.95rem;
+            }
+
+            .pricing {
+                padding: 40px 20px;
+                margin: 20px 15px;
+                border-radius: 20px;
+            }
+
+            .pricing h2 {
+                font-size: 2rem;
+                margin-bottom: 15px;
+            }
+
+            .price {
+                font-size: 3rem;
+                margin: 20px 0;
+            }
+
+            .guarantee {
+                padding: 15px;
+                margin: 20px 0;
+                border-radius: 10px;
+                font-size: 1rem;
+            }
+
+            #hotmart-sales-funnel {
+                margin: 30px 0 0 0;
+            }
+
+            .btn-primary {
+                padding: 18px 25px;
+                font-size: 1.1rem;
+                letter-spacing: 1px;
+                border-radius: 25px;
+                word-break: break-word;
+                line-height: 1.3;
+            }
+
+            .btn-secondary {
+                padding: 15px 25px;
+                font-size: 1rem;
+                border-radius: 25px;
+            }
+
+            .doctor-info {
+                padding: 30px 20px;
+            }
+
+            .doctor-info h3 {
+                font-size: 1.4rem;
+            }
+
+            .doctor-info p {
+                font-size: 1rem;
+            }
+
+            .footer {
+                padding: 30px 20px;
+            }
+
+            .footer-links {
+                margin: 20px 0;
+            }
+
+            .footer-links a {
+                display: block;
+                margin: 8px 0;
+                padding: 10px 15px;
+                border-radius: 15px;
+                font-size: 0.95rem;
+            }
+
+            .popup-content {
+                margin: 15px;
+                padding: 25px 20px;
+                max-width: calc(100% - 30px);
+                max-height: 85vh;
+                border-radius: 15px;
+            }
+
+            .popup h2 {
+                font-size: 1.5rem;
+            }
+
+            .popup p {
+                font-size: 0.95rem;
+                margin-bottom: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                margin: 0;
+                border-radius: 0;
+            }
+
+            .header h1 {
+                font-size: 1.6rem;
+                line-height: 1.2;
+                padding: 20px 15px;
+            }
+
+            .alert-box {
+                padding: 20px 12px;
+                margin: 15px 10px;
+            }
+
+            .alert-box h2 {
+                font-size: 1.3rem;
+                line-height: 1.2;
+            }
+
+            .success-message, .warning {
+                margin: 12px 10px;
+                padding: 16px 12px;
+                font-size: 0.95rem;
+                gap: 10px;
+            }
+
+            .success-message::before, .warning::before {
+                width: 18px;
+                height: 18px;
+                font-size: 0.8rem;
+            }
+
+            .content-section {
+                padding: 25px 12px;
+            }
+
+            .questions {
+                margin: 15px 10px;
+                padding: 25px 15px;
+            }
+
+            .questions h3 {
+                font-size: 1.4rem;
+                margin-bottom: 25px;
+            }
+
+            .question-item {
+                padding: 18px;
+            }
+
+            .question-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            .question-text {
+                font-size: 0.95rem;
+            }
+
+            .effects-list {
+                padding: 18px;
+                margin: 18px 0;
+            }
+
+            .effects-list h4 {
+                font-size: 1.1rem;
+            }
+
+            .story-section {
+                padding: 25px 15px;
+            }
+
+            .story-section h3 {
+                font-size: 1.3rem;
+            }
+
+            .solution-section {
+                padding: 30px 15px;
+                margin: 15px 10px;
+            }
+
+            .solution-section h2 {
+                font-size: 1.7rem;
+                margin-bottom: 20px;
+            }
+
+            .image-container {
+                margin: 25px 0;
+                padding: 15px;
+            }
+
+            .benefits {
+                margin: 25px 0;
+                padding: 25px 15px;
+            }
+
+            .benefits h3 {
+                font-size: 1.4rem;
+                margin-bottom: 25px;
+            }
+
+            .benefit-item {
+                padding: 18px;
+            }
+
+            .benefit-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            .benefit-text {
+                font-size: 0.95rem;
+            }
+
+            .results {
+                margin: 25px 0;
+                padding: 25px 15px;
+            }
+
+            .results h3 {
+                font-size: 1.4rem;
+                margin-bottom: 25px;
+            }
+
+            .result-item {
+                padding: 18px;
+                min-height: 110px;
+            }
+
+            .result-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            .result-text {
+                font-size: 0.9rem;
+            }
+
+            .pricing {
+                padding: 30px 15px;
+                margin: 15px 10px;
+            }
+
+            .pricing h2 {
+                font-size: 1.7rem;
+                margin-bottom: 12px;
+            }
+
+            .price {
+                font-size: 2.5rem;
+                margin: 15px 0;
+            }
+
+            .guarantee {
+                padding: 12px;
+                margin: 15px 0;
+                font-size: 0.95rem;
+            }
+
+            #hotmart-sales-funnel {
+                margin: 25px 0 0 0;
+            }
+
+            .btn-primary {
+                padding: 16px 20px;
+                font-size: 1rem;
+                letter-spacing: 0.5px;
+                line-height: 1.3;
+            }
+
+            .btn-secondary {
+                padding: 14px 20px;
+                font-size: 0.95rem;
+            }
+
+            .doctor-info {
+                padding: 25px 15px;
+            }
+
+            .doctor-info h3 {
+                font-size: 1.3rem;
+            }
+
+            .doctor-info p {
+                font-size: 0.95rem;
+            }
+
+            .footer {
+                padding: 25px 15px;
+            }
+
+            .footer-links a {
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
+
+            .popup-content {
+                margin: 10px;
+                padding: 20px 15px;
+                max-width: calc(100% - 20px);
+                max-height: 90vh;
+            }
+
+            .popup h2 {
+                font-size: 1.3rem;
+            }
+
+            .popup p {
+                font-size: 0.9rem;
+                margin-bottom: 10px;
+            }
+        }
+
+        /* Tablet Responsive */
+        @media (min-width: 769px) and (max-width: 1023px) {
+            .container {
+                max-width: 100%;
+                padding: 0 20px;
+            }
+        }
+
+        /* Desktop */
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 900px;
+                padding: 0 20px;
+            }
+
+            .questions-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .results-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .solution-section {
+                padding: 40px 30px;
+                margin: 28px 20px;
+            }
+
+            .pricing {
+                padding: 40px 30px;
+                margin: 28px 20px;
+            }
+
+            .btn-primary {
+                padding: 16px 32px;
+                font-size: 1.1rem;
+                width: auto;
+                display: inline-block;
+            }
+        }
+
+        /* Touch device optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .btn-primary, .btn-secondary {
+                min-height: 48px;
+                touch-action: manipulation;
+            }
+
+            .question-item, .benefit-item, .result-item {
+                transition: transform 0.2s ease;
+            }
+
+            .question-item:active, .benefit-item:active, .result-item:active {
+                transform: scale(0.98);
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading animation */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ATENCIÓN: ¡NO CIERRES NI ACTUALICES ESTA PÁGINA AHORA!</h1>
+        </div>
+
+        <div class="success-message" style="text-align: center; margin-top: 20px;">
+            Antes de finalizar, necesito hacerte una última pregunta:
+        </div>
+
+        <div class="content-section">
+            <div class="questions">
+                <h3>¿Estás logrando dormir bien por las noches?</h3>
+                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 40px; color: #4a5568;">Porque si la respuesta es no, todo lo que has conquistado puede estar en riesgo.</p>
+                <p style="text-align: center; font-size: 1.1rem; margin-bottom: 30px; color: #2d3748; font-weight: 600;">Responde con sinceridad:</p>
+                <div class="questions-grid">
+                    <div class="question-item">
+                        <div class="question-icon">⏰</div>
+                        <div class="question-text">¿Tardas más de 30 minutos en dormirte?</div>
+                    </div>
+                    <div class="question-item">
+                        <div class="question-icon">🌙</div>
+                        <div class="question-text">¿Te despiertas varias veces durante la madrugada?</div>
+                    </div>
+                    <div class="question-item">
+                        <div class="question-icon">😴</div>
+                        <div class="question-text">¿Te levantas cansado, incluso después de dormir varias horas?</div>
+                    </div>
+                    <div class="question-item">
+                        <div class="question-icon">😰</div>
+                        <div class="question-text">¿Sientes ansiedad al intentar dormir?</div>
+                    </div>
+                    <div class="question-item">
+                        <div class="question-icon">💧</div>
+                        <div class="question-text">¿Te despiertas con una sed intensa durante la noche?</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert-box">
+            <h2>Si respondiste SÍ a por lo menos dos, necesitas saber esto:</h2>
+        </div>
+
+        <div class="content-section">
+            <h3 style="text-align: center; font-size: 2.5rem; margin-bottom: 30px; color: #dc2626;">Dormir mal descontrola tu glucosa</h3>
+            <p style="font-size: 1.3rem; text-align: center; margin-bottom: 30px; font-weight: 600;">Dormir mal es una de las principales causas del descontrol glucémico.</p>
+            <p style="font-size: 1.2rem; text-align: center; margin-bottom: 30px;">Cuando no duermes bien, tu cuerpo libera cortisol en exceso.</p>
+            
+            <div class="effects-list">
+                <h4>El cortisol:</h4>
+                <ul>
+                    <li>Aumenta la resistencia a la insulina</li>
+                    <li>Eleva los niveles de azúcar en la sangre</li>
+                    <li>Bloquea la regeneración del páncreas</li>
+                    <li>Sabotea todos tus esfuerzos</li>
+                </ul>
+            </div>
+            
+            <p style="font-size: 1.1rem; margin: 30px 0; text-align: center; font-weight: 600;">Estudios de la Universidad de Chicago: una sola noche de mal sueño reduce la sensibilidad a la insulina hasta en un 25%.</p>
+            
+            <div class="effects-list">
+                <h4>El ciclo vicioso:</h4>
+                <p style="font-size: 1.2rem; font-weight: 600; margin-bottom: 15px;">Diabetes → Glucosa alta → Sed y micción frecuente → Sueño deficiente → Cortisol elevado → Glucosa aún más alta</p>
+                <p style="font-size: 1.1rem; font-weight: 600; color: #dc2626;">Estás atrapado en este ciclo.</p>
+            </div>
+        </div>
+
+        <div class="story-section">
+            <h3>La historia de María</h3>
+            <p>María seguía el Protocolo Cero Azúcar perfectamente, pero su glucosa seguía alta.</p>
+            <p>El problema: dormía solo de 4 a 5 horas por noche.</p>
+            <p>Cuando comenzó el protocolo de sueño:</p>
+            
+            <div class="results">
+                <h3>Resultados de María:</h3>
+                <div class="results-grid">
+                    <div class="result-item">
+                        <div class="result-icon">📉</div>
+                        <div class="result-text">Semana 1: Glucosa bajó de 145 a 128</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-icon">📊</div>
+                        <div class="result-text">Semana 2: Glucosa en 112</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-icon">✅</div>
+                        <div class="result-text">Semana 4: Glucosa estabilizada en 98</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-icon">🎯</div>
+                        <div class="result-text">Rompió el ciclo vicioso</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="solution-section">
+            <h2>La solución: Descanso Reparador</h2>
+            
+            <div class="image-container">
+                <img src="../assets/mock-up4.webp" alt="Descanso Reparador" />
+            </div>
+            
+            <p style="font-size: 1.3rem; text-align: center; margin-bottom: 40px; font-weight: 600;">Programa digital exclusivo para personas con diabetes que luchan por dormir bien.</p>
+            
+            <div class="benefits">
+                <h3>Lo que recibes:</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🎵</div>
+                        <div class="benefit-text">Videos de relajación guiada (respiración, meditación, música terapéutica)</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📋</div>
+                        <div class="benefit-text">Rutinas nocturnas: checklist interactivo</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📖</div>
+                        <div class="benefit-text">Mini e-book: "7 Pasos Para un Sueño Reparador Si Vives con Diabetes"</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">💳</div>
+                        <div class="benefit-text">Tarjeta digital con frases calmantes</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📱</div>
+                        <div class="benefit-text">Contenido semanal exclusivo (audios/videos de 5-10 min)</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🎯</div>
+                        <div class="benefit-text">Desafío del Sueño de la Semana (micro-desafíos prácticos)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pricing">
+            <h2>Solo 9 dólares</h2>
+            <div class="price">$9</div>
+            <p>Una consulta con un especialista del sueño cuesta entre 200 y 400 dólares.</p>
+            <p>Hoy obtienes acceso vitalicio a Descanso Reparador por solo 9 dólares.</p>
+            
+            <div class="guarantee">
+                Garantía de 30 días: Si no mejora tu sueño, te devolvemos el 100% del valor.
+            </div>
+
+            <!-- HOTMART - Sales Funnel Widget -->
+            <!--- sales funnel container --->
+            <div id="hotmart-sales-funnel"></div>
+
+            <!--- script load and setup --->
+            <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+            <script>
+            checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+            </script>
+            <!-- HOTMART - Sales Funnel Widget -->
+        </div>
+
+        <div class="doctor-info">
+            <h3>Dra. Yumi Takahashi</h3>
+            <p>Especialista en Nutrición y Salud</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-links">
+            <a href="#" onclick="openPopup('privacy')">Política de Privacidad</a>
+            <a href="#" onclick="openPopup('terms')">Términos de Uso</a>
+        </div>
+        <p>&copy; 2025 Descanso Reparador. Todos los derechos reservados.</p>
+    </div>
+
+    <!-- Privacy Policy Popup -->
+    <div id="privacy-popup" class="popup">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closePopup('privacy')">&times;</button>
+            <h2>Política de Privacidad</h2>
+            <p><strong>Última actualización:</strong> 1 de enero de 2025</p>
+            
+            <h3>1. Información que recopilamos</h3>
+            <p>Recopilamos información que nos proporciona directamente, como cuando se registra para nuestros servicios, realiza una compra o se comunica con nosotros.</p>
+            
+            <h3>2. Cómo utilizamos su información</h3>
+            <p>Utilizamos la información recopilada para:</p>
+            <ul>
+                <li>Proporcionar y mejorar nuestros servicios</li>
+                <li>Procesar transacciones</li>
+                <li>Enviar comunicaciones relacionadas con el servicio</li>
+                <li>Personalizar su experiencia</li>
+            </ul>
+            
+            <h3>3. Compartir información</h3>
+            <p>No vendemos, alquilamos ni compartimos su información personal con terceros, excepto según se describe en esta política.</p>
+            
+            <h3>4. Seguridad</h3>
+            <p>Implementamos medidas de seguridad técnicas y organizativas para proteger su información personal contra acceso no autorizado, alteración, divulgación o destrucción.</p>
+            
+            <h3>5. Sus derechos</h3>
+            <p>Tiene derecho a acceder, corregir, eliminar o restringir el procesamiento de su información personal. Para ejercer estos derechos, contáctenos.</p>
+            
+            <h3>6. Contacto</h3>
+            <p>Si tiene preguntas sobre esta política de privacidad, puede contactarnos en: info@descansoreparador.com</p>
+        </div>
+    </div>
+
+    <!-- Terms of Use Popup -->
+    <div id="terms-popup" class="popup">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closePopup('terms')">&times;</button>
+            <h2>Términos de Uso</h2>
+            <p><strong>Última actualización:</strong> 1 de enero de 2025</p>
+            
+            <h3>1. Aceptación de los términos</h3>
+            <p>Al acceder y utilizar este sitio web y nuestros servicios, acepta cumplir con estos términos de uso.</p>
+            
+            <h3>2. Descripción del servicio</h3>
+            <p>Descanso Reparador es un programa digital diseñado para ayudar a mejorar la calidad del sueño y controlar la glucosa a través de técnicas especializadas.</p>
+            
+            <h3>3. Uso permitido</h3>
+            <p>Usted puede utilizar nuestros servicios únicamente para fines legales y de acuerdo con estos términos.</p>
+            
+            <h3>4. Restricciones</h3>
+            <p>No puede:</p>
+            <ul>
+                <li>Utilizar el servicio para actividades ilegales</li>
+                <li>Intentar acceder a sistemas no autorizados</li>
+                <li>Interferir con el funcionamiento del servicio</li>
+                <li>Reproducir o distribuir contenido sin autorización</li>
+            </ul>
+            
+            <h3>5. Garantía y limitación de responsabilidad</h3>
+            <p>Nuestros servicios se proporcionan "tal como están". No garantizamos resultados específicos y nuestra responsabilidad está limitada según la ley aplicable.</p>
+            
+            <h3>6. Política de reembolsos</h3>
+            <p>Ofrecemos una garantía de 30 días. Si no está satisfecho con el servicio, puede solicitar un reembolso completo dentro de este período.</p>
+            
+            <h3>7. Modificaciones</h3>
+            <p>Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios entrarán en vigor inmediatamente después de su publicación.</p>
+            
+            <h3>8. Contacto</h3>
+            <p>Para preguntas sobre estos términos, contáctenos en: legal@descansoreparador.com</p>
+        </div>
+    </div>
+
+    <script>
+
+        // Popup functions
+        function openPopup(type) {
+            const popup = document.getElementById(type + '-popup');
+            popup.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePopup(type) {
+            const popup = document.getElementById(type + '-popup');
+            popup.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close popup when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target.classList.contains('popup')) {
+                e.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+    </script>
+</body>
+</html>
