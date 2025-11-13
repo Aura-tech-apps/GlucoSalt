@@ -1,3 +1,5 @@
 export async function onRequest(context) {
-  return context.env.ASSETS.fetch("/front/lead1/vsl-37.html", context.request);
+  const url = new URL(context.request.url);
+  url.pathname = "/front/lead1/vsl-37.html";
+  return fetch(url, context.request);
 }
