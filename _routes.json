@@ -1,14 +1,11 @@
 {
   "version": 1,
-  "description": "Configuração de rotas - Permite Functions processarem slugs personalizadas",
+  "description": "Configuração de rotas - Slugs personalizadas com bloqueio de acesso direto",
   "include": [
     "/*"
   ],
   "exclude": [
     "/assets/*",
-    "/front/*",
-    "/presell/*",
-    "/backredirect/*",
     "/upsells/*"
   ]
 }
