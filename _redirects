@@ -1,0 +1,57 @@
+# Cloudflare Pages Redirects Configuration
+# Rotas limpas para as páginas de leads
+
+# Lead 1 - Rotas principais
+/lead1/27 /front/lead1/vsl-27.html 200
+/lead1/37 /front/lead1/vsl-37.html 200
+/lead1/47 /front/lead1/vsl-47.html 200
+
+# Lead 2 - Rotas principais
+/lead2/27 /front/lead2/vsl-27.html 200
+/lead2/37 /front/lead2/vsl-37.html 200
+/lead2/47 /front/lead2/vsl-47.html 200
+
+# Lead 3 - Rotas principais
+/lead3/27 /front/lead3/vsl-27.html 200
+/lead3/37 /front/lead3/vsl-37.html 200
+/lead3/47 /front/lead3/vsl-47.html 200
+
+# Lead 4 - Rotas principais
+/lead4/27 /front/lead4/vsl-27.html 200
+/lead4/37 /front/lead4/vsl-37.html 200
+/lead4/47 /front/lead4/vsl-47.html 200
+
+# Rotas curtas alternativas (opcional)
+/1/27 /front/lead1/vsl-27.html 200
+/1/37 /front/lead1/vsl-37.html 200
+/1/47 /front/lead1/vsl-47.html 200
+
+/2/27 /front/lead2/vsl-27.html 200
+/2/37 /front/lead2/vsl-37.html 200
+/2/47 /front/lead2/vsl-47.html 200
+
+/3/27 /front/lead3/vsl-27.html 200
+/3/37 /front/lead3/vsl-37.html 200
+/3/47 /front/lead3/vsl-47.html 200
+
+/4/27 /front/lead4/vsl-27.html 200
+/4/37 /front/lead4/vsl-37.html 200
+/4/47 /front/lead4/vsl-47.html 200
+
+# Redirecionamento da raiz para lead1/27 (página padrão)
+/ /front/lead1/vsl-27.html 200
+
+# Compatibilidade com URLs antigas (caso existam)
+/front/lead1/vsl-27.html /front/lead1/vsl-27.html 200
+/front/lead1/vsl-37.html /front/lead1/vsl-37.html 200
+/front/lead1/vsl-47.html /front/lead1/vsl-47.html 200
+/front/lead2/vsl-27.html /front/lead2/vsl-27.html 200
+/front/lead2/vsl-37.html /front/lead2/vsl-37.html 200
+/front/lead2/vsl-47.html /front/lead2/vsl-47.html 200
+/front/lead3/vsl-27.html /front/lead3/vsl-27.html 200
+/front/lead3/vsl-37.html /front/lead3/vsl-37.html 200
+/front/lead3/vsl-47.html /front/lead3/vsl-47.html 200
+/front/lead4/vsl-27.html /front/lead4/vsl-27.html 200
+/front/lead4/vsl-37.html /front/lead4/vsl-37.html 200
+/front/lead4/vsl-47.html /front/lead4/vsl-47.html 200
+
