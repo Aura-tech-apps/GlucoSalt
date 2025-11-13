@@ -1,41 +1,14 @@
 {
   "version": 1,
-  "description": "Configuração de rotas - Exclui slugs personalizadas do processamento de Functions",
+  "description": "Configuração de rotas - Permite Functions processarem slugs personalizadas",
   "include": [
     "/*"
   ],
   "exclude": [
-    "/yuo",
-    "/yuo/*",
-    "/klm",
-    "/klm/*",
-    "/nop",
-    "/nop/*",
-    "/ntg",
-    "/ntg/*",
-    "/efg",
-    "/efg/*",
-    "/hij",
-    "/hij/*",
-    "/bvc",
-    "/bvc/*",
-    "/yza",
-    "/yza/*",
-    "/bcd",
-    "/bcd/*",
-    "/fas",
-    "/fas/*",
-    "/hgx",
-    "/hgx/*",
-    "/jjg",
-    "/jjg/*",
-    "/ewq",
-    "/ewq/*",
+    "/assets/*",
     "/front/*",
     "/presell/*",
-    "/assets/*",
     "/backredirect/*",
     "/upsells/*"
   ]
 }
-

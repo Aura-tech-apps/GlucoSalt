@@ -1,5 +1,5 @@
 # Cloudflare Pages Redirects Configuration
-# Rotas com slugs personalizadas
+# Este arquivo é usado como fallback caso as Functions não funcionem
 
 # ====================================
 # PRESELL
@@ -56,6 +56,6 @@
 /ewq/ /front/lead4/vsl-47.html 200
 
 # ====================================
-# PÁGINA INICIAL (opcional)
+# PÁGINA INICIAL
 # ====================================
 / /presell/presell.html 200
